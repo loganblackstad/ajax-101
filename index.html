@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AJAX Dog Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container d-flex flex-column">
+
+            <h1 class="mt-5">Let's Generate some Doggos!</h1>
+            <br>
+            <br>
+            <p>Select whether you want to generate a random image(s) for a random dog breed or if you would like to choose the dog breed first:</p>
+            <div class="btn-group btn-group-toggle w-25" data-toggle="buttons">
+                <label class="btn btn-primary active" id="option1">
+                    <input type="radio" name="options" autocomplete="off"> Random
+                </label>
+                <label class="btn btn-primary" id="option2">
+                    <input type="radio" name="options" autocomplete="off" checked> Select Breed
+                </label>
+            </div>
+
+            <label for="dog-breeds">Select a Dog Breed:</label>
+            <select id="dog-breeds" class="mb-4">
+                <option value="" disabled selected>Please select a dog breed</option>
+            </select>
+            <div class="input">How Many Doggo images would you like to generate?  <input min="1" max="50" id="inputNum" value="1" type="number"><span style="color: grey;"> (max 50)</span></div>
+            
+            <button class="button-doggo mt-5">Generate Doggo(s)</button>
+
+            <div class="image-container"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+            crossorigin="anonymous"></script>
+        <script src="./scripts/index.js" defer></script>
+    </body>
+</html>
